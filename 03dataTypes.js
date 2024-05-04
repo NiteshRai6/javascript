@@ -9,7 +9,7 @@
 // bigInt
 // symbol
 
-//Total 2 Non Primitiuve (Reference) Data Type :
+//Total 3 Non Primitiuve (Reference) Data Type :
 // array
 // object
 // regExp
@@ -42,6 +42,8 @@
 // console.log(typeof x);
 // let y = + '2';
 // console.log(typeof y);
+// let z = + 'apple';
+// console.log(typeof z);
 
 // let x = 5;
 // console.log(typeof x);
@@ -92,6 +94,10 @@
 // firstName = 'John';
 // console.log(`My first name is ${firstName}.`);
 
+// var firstName;
+// console.log('My first name is ' + firstName + '.');
+// firstName = 'John';
+// console.log(`My first name is ${firstName}.`);
 
 // let firstName = null;
 // console.log(firstName, typeof firstName);
@@ -99,6 +105,13 @@
 
 // console.log(Number.MAX_SAFE_INTEGER);
 // console.log((Number.MIN_SAFE_INTEGER));
+
+// let x = 5 + '';
+// console.log(x.length);
+// let data = Number.MAX_SAFE_INTEGER + '';
+// console.log(data.length);
+// let data2 = String(Number.MAX_SAFE_INTEGER);
+// console.log(data2.length);
 
 // let num1 = BigInt(12);
 // console.log(num1);

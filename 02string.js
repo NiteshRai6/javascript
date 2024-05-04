@@ -29,7 +29,7 @@
 // toLowerCase() :
 // let userName = 'John';
 // console.log(userName);
-// let newName = userName.toLocaleLowerCase();
+// let newName = userName.toLowerCase();
 // console.log(newName);
 
 

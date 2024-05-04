@@ -5,15 +5,18 @@
 // console.log(fruits);
 // fruits[1] = 'Grapes';
 // console.log(fruits);
-// console.log(typeof fruits); // Array is also an object.
+
+// Array is also an object.
+// let fruits = ['Apple', 'Banana', 'Orange'];
+// console.log(typeof fruits);
 // console.log(Array.isArray(fruits));
 // let obj = {};
 // console.log(Array.isArray(obj));
 
-// let count = [1, 2, 3,];
+// let count = [1, 2, 3];
 // console.log(count);
 
-// const mixed = [1, 'John', undefined, null, true,];
+// const mixed = [1, 'John', undefined, null, true];
 // console.log(mixed);
 
 // Arrays are mutuable, menas original array can be modified.
@@ -24,6 +27,7 @@
 // console.log(fruits);
 
 // pop : remove & return the element.
+// push &  pop follows, LIFO : Last In First Out.
 // let poppedFruit = fruits.pop();
 // console.log(fruits);
 // console.log(poppedFruit);
@@ -37,6 +41,8 @@
 // console.log(fruits);
 // console.log(removedFruit);
 
+// Note : push &  pop follows, LIFO : Last In First Out.
+// Note : unshift &  shift follows, FIFO : First In First Out.
 // Note : push & pop are faster than shift & unshift cause of memory allocation.
 
 // let array1 = ['item1', 'item2'];
@@ -60,7 +66,11 @@
 // let array2 = [...array1];
 // let array2 = [...array1, 'item3', 'item4'];
 
-// slice method is faster than spread method but spread is most used by developers, specially in React.
+// console.log(array1);
+// console.log(array2);
+
+// Note : slice method is faster than spread method but spread is most used by developers, specially in React.
+
 // array1.push('item5');
 // console.log(array1 === array2);
 // console.log(array1);
@@ -70,6 +80,10 @@
 // let array2 = ['d', 'e', 'f'];
 // let array3 = [...array1, ...array2];
 // console.log(array3);
+// let array4 = array1.slice(0).concat(array2.slice(0));
+// console.log(array4);
+// let array5 = [].concat(array1, array2, 'data')
+// console.log(array5);
 
 // const fruits = ['Apple', 'Banana', 'Orange'];
 // const fruits2 = [];
@@ -89,6 +103,12 @@
 // console.log(fruits);
 // TypeError: Assignment to constant variable.
 
+// for :
+// const array = [1, 2, 3, 4, 5];
+// for (let i = 0; i < array?.length; i++) {
+//     console.log(array[i]);
+// }
+
 // for of : iterate in array & gives values.
 // let fruits = ['Apple', 'Banana', 'Orange'];
 // for (let fruit of fruits) {
@@ -102,13 +122,15 @@
 // }
 
 // Array destructuring :
-// let myArray = ['value1', 'value2', 'value3', 'value4']; 
+// let myArray = ['value1', 'value2', 'value3', 'value4'];
 
 // let myAr1 = myArray[0];
 // let myAr2 = myArray[1];
+// console.log(myAr2);
 
 // use , to skip the index.
 // let [myAr1, , myAr2] = myArray;
+
 // let [myAr1, myAr2, ...myNewAr] = myArray;
 // slice cut the array & gives result from given index.
 // let myNewAr = myArray.slice(2);
@@ -134,9 +156,6 @@
 // numbers.forEach(function (number, index) {
 //     console.log(`Index is ${index} and Number is ${number}`);
 // });
-// numbers.forEach((number, index) => (
-//     console.log(`Index is ${index} and Number is ${number}`)
-// ))
 
 // const users = [
 //     { name: 'John', age: 25 },
@@ -185,6 +204,12 @@
 // }, 0);
 // console.log(totalAmount);
 
+// const data = [2, 4, 6, 8];
+// const sum = data.reduce((accumulator, number) => {
+//     return accumulator + number
+// }, 0);
+// console.log(sum);
+
 // Sort : based on ASCI code, sort anything as String.
 // ASCI Code => 0 : 48 & 9 : 57, A : 65 & Z : 90, a : 97 & z : 122.
 // const numbers = [28, 100, 67, 2];
@@ -193,7 +218,7 @@
 
 // const names = ['john', 'selena', 'tom', 'jenifer', 'Zen'];
 // const sortedNames = names.sort();
-// console.log(sortedNames);   
+// console.log(sortedNames);
 // Ascending Order Sorting : a - b; Descending Order Sorting : b - a;
 // const numbers = [28, 100, 67, 2];
 // const sortedNum = numbers.sort((a, b) => a - b);
@@ -204,11 +229,15 @@
 //     { productId: 2, productName: 'TV', price: 5000 },
 //     { productId: 3, productName: 'Fridge', price: 23000 }
 // ];
-// sort changed the original array, to create new array on the basis of original array, use slice with sort.
+// changed the original array, to create new array on the basis of original array, use slice with sort.
 // userCart.sort((a, b) => a.price - b.price);
 // console.log(userCart);
 
 // const sorted = userCart.slice(0).sort((a, b) => a.price - b.price);
+// console.log(sorted);
+// console.log(userCart);
+
+// const sorted = [...userCart].sort((a, b) => a.price - b.price);
 // console.log(sorted);
 // console.log(userCart);
 
@@ -284,6 +313,12 @@
 // }
 // console.log(length);
 
+// const myArray = [1, 2, 2, 3, 4, 4, 4, 5, 5];
+// const mySet = new Set(myArray);
+// console.log(mySet);
+// const newAr = new Array(mySet);
+// console.log(newAr);
+
 // Map : key, value pairs like object, but object keys must be a String or Symbol type, but Map key can be anything.
 // stored data in Ordered fashion.
 // Duplicate keys are not allowed in Map.
@@ -292,12 +327,12 @@
 //     console.log(key, typeof key);
 // }
 
-const user = new Map();
-user.set('name', 'John');
-user.set('age', 25);
-user.set(1, 'item');
-user.set([1, 2, 3], 'data');
-user.set({ city: 'Delhi' }, 'Town');
+// const user = new Map();
+// user.set('name', 'John');
+// user.set('age', 25);
+// user.set(1, 'item');
+// user.set([1, 2, 3], 'data');
+// user.set({ city: 'Delhi' }, 'Town');
 // console.log(user);
 // for (let key of user.keys()) {
 //     console.log(key, typeof key);
@@ -316,7 +351,7 @@ user.set({ city: 'Delhi' }, 'Town');
 // ]);
 // console.log(person);
 
-const person1 = { id: 1, name: 'John' };
-const extraInfo = new Map();
-extraInfo.set(person1, { age: 25, gender: 'Male' });
-console.log(extraInfo.get(person1).gender);
+// const person1 = { id: 1, name: 'John' };
+// const extraInfo = new Map();
+// extraInfo.set(person1, { age: 25, gender: 'Male' });
+// console.log(extraInfo.get(person1).gender);

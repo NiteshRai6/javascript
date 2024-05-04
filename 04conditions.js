@@ -98,14 +98,14 @@
 // while loop :
 // let i = 0;
 // let total = 0;
-// while (i <= 10) {
+// while (i <= 100) {
 //     total = total + i;
 //     i++;
 // }
 // console.log(total);
 
 // Math Formula : Faster than while loop.
-// let num = 10;
+// let num = 100;
 // let total = (num * (num + 1)) / 2;
 // console.log(total);
 
@@ -147,7 +147,7 @@
 
 // while (i <= 9) {
 //     console.log(i);
-// i++;
+//     i++;
 // }
 
 // do {
@@ -157,7 +157,7 @@
 // while (i <= 9);
 
 // let day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-// let count = 4;
+// let count = 1;
 // switch (count) {
 //     case 1:
 //         console.log(`Today is ${day[0]}.`);
