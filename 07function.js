@@ -1,3 +1,5 @@
+'use strict';
+
 // Function Declaration :
 // function add(a, b) {
 //     return a + b;
@@ -35,7 +37,7 @@
 // const test = findTarget(myArray, 7);
 // console.log(test);
 
-// Arrow function : for 1 parameter, no need of (), for no return & single one line execution, no {} required.
+// Arrow function : for 1 parameter, no need of (), no return required for single one line execution, no {} required.
 // const firstChar = anyString => {
 //     return anyString[0];
 // }
@@ -52,14 +54,14 @@
 // console.log(sum);
 
 //  Hoisting : function declaration support hoisting & so it can be called before declaration.
-//  but arrow function & function expression does not support hoising.
+//  but arrow function & function expression does not support hoisting.
 // const result = isEven(6);
 // console.log(result);
 // function isEven(n) {
 //     return n % 2 === 0;
 // }
 
-// var support hoising for declaration only, not initialization
+// var support hoisting for declaration only, not initialization
 // Error :'const' declarations must be initialized.
 // test = 'Hello';
 // console.log(test);
@@ -69,6 +71,10 @@
 // test = 'Hello';
 // console.log(test);
 // let test;
+
+// let test;
+// test = 'Hello';
+// console.log(test);
 
 // test = 'Hello';
 // console.log(test);
@@ -156,6 +162,13 @@
 //     callback('John');
 // }
 // mainFun(test);
+
+// function add(a, b, cb) {
+//     cb(a, b);
+// }
+// add(5, 8, (a, b) => {
+//     console.log(a + b);
+// })
 
 // function returning function :
 // Higher Order Function (HOF) can take another function as input(parameter), & can return anotrher function.

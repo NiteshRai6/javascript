@@ -1,8 +1,0 @@
-Hoisting
-Callback vs Promises vs Async Await with example
-pseudo class css
-
-
-// Sort the below array by the number of occurrences of the values in an array, keeping in mind that if the number of occurrence of two values are same then the value with alphabetic order will take the precedence
-// let arr = [a, a, b, c, c, c, d, c, d, d, e, e]
-

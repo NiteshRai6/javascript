@@ -1,3 +1,5 @@
+'use strict';
+
 // arrays are good but not sufficient for real world data.
 // object stores key value pairs. object don't have index. object is reference type.
 
@@ -46,7 +48,7 @@
 // const value2 = 'myvalue2';
 
 // Object.keys method :
-// keys = Object.keys(person)
+// let keys = Object.keys(person);
 // console.log(keys);
 // console.log(typeof keys);
 // console.log(Array.isArray(keys));
@@ -54,7 +56,6 @@
 // for (let key of Object.keys(person)) {
 //     console.log(`${key} : ${person[key]}`);
 // }
-
 
 // computed properties :
 // const obj = {};
@@ -111,7 +112,7 @@
 // console.log(obj1);
 // console.log(obj2);
 
-// clonning way 1:
+// clonning way 1 :
 // const obj1 = { key1: 'value1', key2: 'value2' };
 // const obj2 = { ...obj1 };
 // obj1.key3 = 'value3';
@@ -144,7 +145,7 @@
 // console.log(userName);
 
 // const { name, age, ...restProps } = user;
-//  console.log(name, age);
+// console.log(name, age);
 // console.log(restProps);
 
 // objects inside array :
